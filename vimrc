@@ -1,3 +1,5 @@
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
-
+set nocp
+" set rtp+=/path/to/rtp/that/included/pathogen/vim " if needed
+call pathogen#infect()
+syntax on
+filetype plugin indent on
