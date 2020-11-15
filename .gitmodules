@@ -10,3 +10,6 @@
 [submodule "bundle/vim-pollen"]
 	path = bundle/vim-pollen
 	url = https://github.com/otherjoel/vim-pollen.git
+[submodule "bundle/onedark"]
+	path = bundle/onedark
+	url = https://github.com/joshdick/onedark.vim.git
