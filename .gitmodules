@@ -19,3 +19,6 @@
 [submodule "bundle/slimv"]
 	path = bundle/slimv
 	url = https://github.com/kovisoft/slimv.git
+[submodule "bundle/goyo"]
+	path = bundle/goyo
+	url = https://github.com/junegunn/goyo.vim.git

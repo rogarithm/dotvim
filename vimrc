@@ -7,7 +7,6 @@ filetype plugin indent on
 
 set nu
 set ts=2 sw=4
-set tw=100
 " Create an augroup if you don’t already have one
 augroup configgroup
     autocmd!
