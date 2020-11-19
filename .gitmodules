@@ -16,3 +16,6 @@
 [submodule "slimv"]
 	path = slimv
 	url = https://github.com/kovisoft/slimv.git
+[submodule "bundle/slimv"]
+	path = bundle/slimv
+	url = https://github.com/kovisoft/slimv.git
