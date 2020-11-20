@@ -16,6 +16,7 @@ augroup configgroup
     au! BufRead,BufNewFile *.pm set filetype=pollen
     au! BufRead,BufNewFile *.pp set filetype=pollen
     au! BufRead,BufNewFile *.ptree set filetype=pollen
+		au! BufRead,BufNewFile *.scrbl setfiletype scribble
 
     " Suggested editor settings:
     autocmd FileType pollen setlocal wrap      " Soft wrap (don't affect buffer)
