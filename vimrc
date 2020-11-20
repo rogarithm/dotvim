@@ -2,7 +2,8 @@ set nocp
 " set rtp+=/path/to/rtp/that/included/pathogen/vim " if needed
 call pathogen#infect()
 syntax on
-colorscheme onedark " to use onedark color scheme
+colo seoul256-light
+let g:seoul256_light_background = 256
 filetype plugin indent on
 
 set nu

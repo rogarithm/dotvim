@@ -22,3 +22,9 @@
 [submodule "bundle/goyo"]
 	path = bundle/goyo
 	url = https://github.com/junegunn/goyo.vim.git
+[submodule "bundle/limelight"]
+	path = bundle/limelight
+	url = https://github.com/junegunn/limelight.vim.git
+[submodule "bundle/seoul256"]
+	path = bundle/seoul256
+	url = https://github.com/junegunn/seoul256.vim.git
