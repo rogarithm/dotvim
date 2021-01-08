@@ -1,13 +1,18 @@
+" to automatically switch input source to English when we're out from Korean
+" inserting by ESC
+if has('mac') && filereadable('/usr/local/lib/libInputSourceSwitcher.dylib')
+  autocmd InsertLeave * call libcall('/usr/local/lib/libInputSourceSwitcher.dylib', 'Xkb_Switch_setXkbLayout', 'com.apple.keylayout.US')
+endif
+
 set nocp
 " set rtp+=/path/to/rtp/that/included/pathogen/vim " if needed
 call pathogen#infect()
 syntax on
-colo seoul256-light
-let g:seoul256_light_background = 256
+colorscheme onedark
 filetype plugin indent on
 
 set nu
-set ts=2 sw=4
+set ts=2 sw=2
 
 " Create an augroup if you don’t already have one
 augroup configgroup
