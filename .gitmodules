@@ -28,3 +28,6 @@
 [submodule "bundle/seoul256"]
 	path = bundle/seoul256
 	url = https://github.com/junegunn/seoul256.vim.git
+[submodule "bundle/paredit"]
+	path = bundle/paredit
+	url = https://github.com/kovisoft/paredit.git
