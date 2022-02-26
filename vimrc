@@ -25,4 +25,6 @@ augroup END
 " insert lozenge char with ctrl-L
 imap <c-l> ◊
 
+if has('mac') && filereadable('/usr/local/lib/libInputSourceSwitcher.dylib')
+		autocmd InsertLeave * call libcall('/usr/local/lib/libInputSourceSwitcher.dylib', 'Xkb_Switch_setXkbLayout', 'com.apple.keylayout.US')
 endif
