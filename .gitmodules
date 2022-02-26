@@ -10,9 +10,6 @@
 [submodule "bundle/vim-pollen"]
 	path = bundle/vim-pollen
 	url = https://github.com/otherjoel/vim-pollen.git
-[submodule "bundle/onedark"]
-	path = bundle/onedark
-	url = https://github.com/joshdick/onedark.vim.git
 [submodule "slimv"]
 	path = slimv
 	url = https://github.com/kovisoft/slimv.git
@@ -22,12 +19,3 @@
 [submodule "bundle/goyo"]
 	path = bundle/goyo
 	url = https://github.com/junegunn/goyo.vim.git
-[submodule "bundle/limelight"]
-	path = bundle/limelight
-	url = https://github.com/junegunn/limelight.vim.git
-[submodule "bundle/seoul256"]
-	path = bundle/seoul256
-	url = https://github.com/junegunn/seoul256.vim.git
-[submodule "bundle/paredit"]
-	path = bundle/paredit
-	url = https://github.com/kovisoft/paredit.git
