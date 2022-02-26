@@ -22,3 +22,6 @@
 [submodule "bundle/sexp-mappings"]
 	path = bundle/sexp-mappings
 	url = https://github.com/tpope/vim-sexp-mappings-for-regular-people.git
+[submodule "bundle/tslime"]
+	path = bundle/tslime
+	url = https://github.com/sjl/tslime.vim.git
