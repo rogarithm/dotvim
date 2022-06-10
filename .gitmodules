@@ -4,9 +4,6 @@
 [submodule "bundle/sensible"]
 	path = bundle/sensible
 	url = https://github.com/tpope/vim-sensible.git
-[submodule "bundle/vim-racket"]
-	path = bundle/vim-racket
-	url = https://github.com/wlangstroth/vim-racket.git
 [submodule "bundle/vim-pollen"]
 	path = bundle/vim-pollen
 	url = https://github.com/otherjoel/vim-pollen.git
@@ -19,12 +16,6 @@
 [submodule "bundle/tslime"]
 	path = bundle/tslime
 	url = https://github.com/sjl/tslime.vim.git
-[submodule "bundle/vim-sexp-mappings-for-regular-people"]
-	path = bundle/vim-sexp-mappings-for-regular-people
-	url = git://github.com/tpope/vim-sexp-mappings-for-regular-people.git
-[submodule "bundle/vim-sexp"]
-	path = bundle/vim-sexp
-	url = git://github.com/guns/vim-sexp.git
 [submodule "bundle/vim-repeat"]
 	path = bundle/vim-repeat
 	url = git://github.com/tpope/vim-repeat.git
