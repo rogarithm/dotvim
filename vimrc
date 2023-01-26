@@ -54,7 +54,7 @@ let g:md_modify_disabled = 0
 " markdown 파일용 custom vim 설정(ftplugin, ultisnip 등등)이 모두 작동하지 않을 경우
 " let g:vimwiki_global_ext = 0
 
-" 자주 사용하는 vimwiki 명령어에 단축키를 취향대로 매핑해둔다
+" 자주 사용하는 vimwiki 명령어 단축키 설정
 command! WikiIndex :VimwikiIndex
 nmap <LocalLeader>ww <Plug>VimwikiIndex
 nmap <LocalLeader>wi <Plug>VimwikiDiaryIndex
@@ -91,7 +91,7 @@ function! LastModified()
 	endif
 endfun
 
-" 메타데이터 자동 입력 함수
+" 메타데이터 자동 입력
 function! NewTemplate()
 	let l:wiki_directory = v:false
 
@@ -134,7 +134,7 @@ function! NewTemplate()
 	echom 'new wiki page has created'
 endfunction
 
-" 위 두 함수 자동 호출 등록
+" vimwiki 도움 함수를 자동 호출 목록에 등록
 augroup vimwikiauto
 	autocmd BufWritePre *wiki/**/*.md keepjumps call LastModified()
 	autocmd BufRead,BufNewFile *wiki/**/*.md call NewTemplate()
