@@ -4,8 +4,11 @@ call pathogen#infect()
 syntax on
 filetype plugin indent on
 
+let mapleader = ","
+let maplocalleader = "\\"
+set noerrorbells visualbell t_vb= " 사운드 벨, 비주얼 벨 비활성화
 set nu
-set ts=2 sw=4
+set ts=2 sw=2
 
 " startify setup
 let g:startify_session_delete_buffers = 1 "buffer 이름 충돌을 해결하나?
