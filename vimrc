@@ -161,6 +161,19 @@ nnoremap <silent> <F2><F1>   :bprevious!<CR>
 nnoremap <silent> <F2>d      :bd!<CR>
 nnoremap <silent> <F2>o      :%bd <BAR> e # <BAR> bd #<CR> " 현재 버퍼만 남기고 모두 닫는다
 
+" startify로 세션을 다시 불러올 때마다 tagbar를 다시 부르려고 하는데, 이미
+" 만들어진 tagbar가 있어서 두 버퍼가 충돌하는 것 같다. tagbar는 단축키로 켜고
+" 꺼도 상관 없고 세션을 문제없이 여는 게 더 중요하다고 생각되어서 이 설정을
+" 비활성화했다.
+" tagbar에서 ~/.ctags.d/vimwiki.ctags 파일에서 정의한 vimwiki 언어를 인식
+nnoremap <LocalLeader>b :TagbarToggle<CR>:e<CR>
+" let g:tagbar_type_vimwiki = {
+" 			\ 'ctagstype' : 'vimwiki',
+" 			\ 'sort': 0,
+" 			\ 'kinds' : [
+" 				\ 'h:Heading'
+" 				\ ]
+" 				\ }
 
 " insert lozenge char with ctrl-L
 imap <c-l> ◊
