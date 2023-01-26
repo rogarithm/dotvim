@@ -175,5 +175,43 @@ nnoremap <LocalLeader>b :TagbarToggle<CR>:e<CR>
 " 				\ ]
 " 				\ }
 
+" LEARN VIMSCRIPT THE HARD WAY
+:noremap - ddo<c-r>"<ESC>
+:noremap _ ddO<c-r>"<ESC>
+" :inoremap <c-u> <ESC>viwUi
+":nnoremap <c-u> viwU
+:nnoremap <leader>d dd
+:nnoremap <leader>c ddO
+" END LEARN VIMSCRIPT THE HARD WAY
+
+" Java 컴파일 및 실행 단축어
+" 실행 전 최신 파일을 저장한다.
+:nnoremap <leader>q :up<CR>q:?clear<CR>
+":nnoremap r<cr> :!node %<cr>
+
+" Racket
+":nnoremap l<cr> :!racket %<cr>
+hi MatchParen cterm=bold ctermbg=none ctermfg=blue "괄호 강조를 눈에 잘 들어오게 한다
+autocmd bufread,bufnewfile *.lisp,*.scm,*.rkt setlocal equalprg=scmindent "auto indent for lisp
+" tslime {{{
+let g:tslime_ensure_trailing_newlines = 1
+let g:tslime_normal_mapping = '<localleader>t'
+let g:tslime_visual_mapping = '<localleader>t'
+let g:tslime_vars_mapping = '<localleader>T'
+" }}}
+
+" Create an augroup if you don’t already have one
+augroup configgroup
+	autocmd!
+	"Set Pollen syntax for files with these extensions:
+	au! BufRead,BufNewFile *.pm set filetype=pollen
+	au! BufRead,BufNewFile *.pp set filetype=pollen
+	au! BufRead,BufNewFile *.ptree set filetype=pollen
+	au! BufRead,BufNewFile *.scrbl setfiletype scribble
+	" Suggested editor settings:
+	autocmd FileType pollen setlocal wrap      " Soft wrap (don't affect buffer)
+	autocmd FileType pollen setlocal linebreak " Wrap on word-breaks only
+augroup END
+
 " insert lozenge char with ctrl-L
 imap <c-l> ◊
