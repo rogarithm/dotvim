@@ -149,7 +149,18 @@ augroup vimwikiauto
 	autocmd BufRead,BufNewFile *wiki/*.md TagbarOpen "마크다운 편집시 자동으로 Tagbar를 연다
 augroup END
 
-augroup END
+" vim-airline 설정
+let g:airline#extensions#tabline#enabled = 1              " vim-airline 버퍼 목록 켜기
+let g:airline#extensions#tabline#fnamemod = ':t'          " vim-airline 버퍼 목록 파일명만 출력
+let g:airline#extensions#tabline#buffer_nr_show = 1       " buffer number를 보여준다
+let g:airline#extensions#tabline#buffer_nr_format = '%s:' " buffer number format
+
+nnoremap <C-S-t> :enew<Enter> " 새로운 버퍼를 연다
+nnoremap <silent> <F2><F3>   :bnext!<CR>
+nnoremap <silent> <F2><F1>   :bprevious!<CR>
+nnoremap <silent> <F2>d      :bd!<CR>
+nnoremap <silent> <F2>o      :%bd <BAR> e # <BAR> bd #<CR> " 현재 버퍼만 남기고 모두 닫는다
+
 
 " insert lozenge char with ctrl-L
 imap <c-l> ◊
