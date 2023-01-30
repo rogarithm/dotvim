@@ -18,15 +18,6 @@ nnoremap <C-p> :Files<Cr>
 " startify setup
 let g:startify_session_delete_buffers = 1 "buffer 이름 충돌을 해결하나?
 let g:startify_session_persistence = 0
-let g:startify_bookmarks = [
-			"\ { 'wiki' : '		~/study/wiki' },
-			"\ { 'local-wiki' : '		~/local-wiki' },
-			"\ { 'spring-core' : '		~/study/core' },
-			"\ { 'toby-spring' : '		~/study/tobyspring' },
-			"\ { 'algorithm-study' : '		~/study/algorithm-study' },
-			"\ { 'project' : '		~/study/sool-dam-a' },
-			"\ { 'project-wiki' : '		~/study/sool-dam-a.wiki' },
-			\]
 
 let g:startify_list_order = [
             \ ['    Sessions'],
