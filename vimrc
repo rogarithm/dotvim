@@ -29,6 +29,8 @@ let g:startify_list_order = [
             \'commands'
             \]
 
+let g:goyo_width = 100
+
 "1번 위키(공개용)와 2번 위키(개인용).
 "TODO 공개용 위키 저장소 생성 및 로컬에 다운로드 후 path 설정 변경하기
 let g:vimwiki_list = [
