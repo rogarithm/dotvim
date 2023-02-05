@@ -10,6 +10,11 @@ set noerrorbells visualbell t_vb= " 사운드 벨, 비주얼 벨 비활성화
 set nu
 set ts=2 sw=2
 
+" ruby 전용 들여쓰기 설정
+autocmd Filetype ruby set softtabstop=2
+autocmd Filetype ruby set sw=2
+autocmd Filetype ruby set ts=2
+
 " fzf install. this plugin were installed with homebrew
 set rtp+=/usr/local/opt/fzf
 nnoremap <C-p> :Files<Cr>
