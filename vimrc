@@ -15,6 +15,8 @@ autocmd Filetype ruby set softtabstop=2
 autocmd Filetype ruby set sw=2
 autocmd Filetype ruby set ts=2
 
+set shell=bash\ -l
+
 " fzf install. this plugin were installed with homebrew
 set rtp+=/usr/local/opt/fzf
 nnoremap <C-p> :Files<Cr>
@@ -144,7 +146,7 @@ endfunction
 augroup vimwikiauto
 	autocmd BufWritePre *wiki/**/*.md keepjumps call LastModified()
 	autocmd BufRead,BufNewFile *wiki/**/*.md call NewTemplate()
-	autocmd BufRead,BufNewFile *wiki/*.md TagbarOpen "마크다운 편집시 자동으로 Tagbar를 연다
+	"autocmd BufRead,BufNewFile *wiki/*.md TagbarOpen "마크다운 편집시 자동으로 Tagbar를 연다
 augroup END
 
 " vim-airline 설정
@@ -165,6 +167,7 @@ nnoremap <silent> <F2>o      :%bd <BAR> e # <BAR> bd #<CR> " 현재 버퍼만 �
 " 비활성화했다.
 " tagbar에서 ~/.ctags.d/vimwiki.ctags 파일에서 정의한 vimwiki 언어를 인식
 nnoremap <LocalLeader>b :TagbarToggle<CR>:e<CR>
+
 " let g:tagbar_type_vimwiki = {
 " 			\ 'ctagstype' : 'vimwiki',
 " 			\ 'sort': 0,
