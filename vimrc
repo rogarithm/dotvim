@@ -1,3 +1,9 @@
+" to automatically switch input source to English when we're out from Korean
+" inserting by ESC
+if has('mac') && filereadable('/usr/local/lib/libInputSourceSwitcher.dylib')
+  autocmd InsertLeave * call libcall('/usr/local/lib/libInputSourceSwitcher.dylib', 'Xkb_Switch_setXkbLayout', 'com.apple.keylayout.US')
+endif
+
 set nocp
 " set rtp+=/path/to/rtp/that/included/pathogen/vim " if needed
 call pathogen#infect()
