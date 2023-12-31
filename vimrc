@@ -16,6 +16,9 @@ nnoremap <leader>vsc :up ~/.vim/vimrc <BAR> :source ~/.vim/vimrc <CR>
 
 nnoremap <F8> :G log <BAR> wincmd L <BAR> wincmd h <CR>
 
+" For korean encoding
+set encoding=utf-8
+set fileencodings=utf-8,cp949
 
 set nu
 set ts=2 sw=4
