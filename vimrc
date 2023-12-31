@@ -12,6 +12,52 @@ let maplocalleader = "\\"
 nnoremap <leader>vec :vsplit ~/.vim/vimrc <BAR> wincmd L <CR>
 nnoremap <leader>vsc :up ~/.vim/vimrc <BAR> :source ~/.vim/vimrc <CR>
 
+function! CapitalizeSqlFunctionName() range
+    silent! execute ":'<,'>s/\\v(<ascii)/\\U\\1/g"
+    silent! execute ":'<,'>s/\\v(<char>)/\\U\\1/g"
+    silent! execute ":'<,'>s/\\v(<concat>)/\\U\\1/g"
+    silent! execute ":'<,'>s/\\v(<varchar>)/\\U\\1/g"
+    silent! execute ":'<,'>s/\\v(<text>)/\\U\\1/g"
+    silent! execute ":'<,'>s/\\v(<values>)/\\U\\1/g"
+    silent! execute ":'<,'>s/\\v(<length>)/\\U\\1/g"
+endfunction
+function! CapitalizeSqlKeyword() range
+    silent! execute ":'<,'>s/\\v(<show warnings>)/\\U\\1/g"
+    silent! execute ":'<,'>s/\\v(<create table>)/\\U\\1/g"
+    silent! execute ":'<,'>s/\\v(<insert into>)/\\U\\1/g"
+    silent! execute ":'<,'>s/\\v(<delete>)/\\U\\1/g"
+
+    silent! execute ":'<,'>s/\\v(<update>)/\\U\\1/g"
+    silent! execute ":'<,'>s/\\v(<set>)/\\U\\1/g"
+
+    silent! execute ":'<,'>s/select/SELECT/g"
+    silent! execute ":'<,'>s/from/FROM/g"
+    silent! execute ":'<,'>s/order by/ORDER BY/g"
+    silent! execute ":'<,'>s/where/WHERE/g"
+    silent! execute ":'<,'>s/having/HAVING/g"
+    silent! execute ":'<,'>s/group by/GROUP BY/g"
+    silent! execute ":'<,'>s/distinct/DISTINCT/g"
+    silent! execute ":'<,'>s/\\v(<or>)/\\U\\1/g"
+    silent! execute ":'<,'>s/\\v(<is null>)/\\U\\1/g"
+    silent! execute ":'<,'>s/\\v(<on>)/\\U\\1/g"
+    silent! execute ":'<,'>s/\\v(<not>)/\\U\\1/g"
+    silent! execute ":'<,'>s/\\v(<in>)/\\U\\1/g"
+    silent! execute ":'<,'>s/\\v(<like>)/\\U\\1/g"
+    silent! execute ":'<,'>s/\\v(<and>)/\\U\\1/g"
+    silent! execute ":'<,'>s/\\v(<between>)/\\U\\1/g"
+    silent! execute ":'<,'>s/\\v(<regexp)/\\U\\1/g"
+    silent! execute ":'<,'>s/\\v(<union)/\\U\\1/g"
+    silent! execute ":'<,'>s/\\v(<union all)/\\U\\1/g"
+    silent! execute ":'<,'>s/inner join/INNER JOIN/g"
+endfunction
+
+function! RunAllSqlFunctions() range
+    call CapitalizeSqlKeyword()
+    call CapitalizeSqlFunctionName()
+endfunction
+
+autocmd Filetype sql vnoremap <leader>- :<C-u>call RunAllSqlFunctions()<CR>
+
 autocmd FileType javascript nnoremap <leader>vsc :up ~/.vim/vimrc
 			\ <BAR> :source ~/.vim/vimrc<CR>
 			\ <BAR> :set ft=javascript<CR>
