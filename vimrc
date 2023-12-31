@@ -21,7 +21,8 @@ set encoding=utf-8
 set fileencodings=utf-8,cp949
 
 set nu
-set ts=2 sw=4
+set ts=2 sw=2
+
 
 " Create an augroup if you don’t already have one
 augroup configgroup
