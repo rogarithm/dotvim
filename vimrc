@@ -13,6 +13,10 @@ nnoremap <leader>vec :vsplit ~/.vim/vimrc <BAR> wincmd L <CR>
 nnoremap <leader>vsc :up ~/.vim/vimrc <BAR> :source ~/.vim/vimrc <CR>
 
 
+
+nnoremap <F8> :G log <BAR> wincmd L <BAR> wincmd h <CR>
+
+
 set nu
 set ts=2 sw=4
 
