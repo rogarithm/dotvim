@@ -4,6 +4,8 @@ call pathogen#infect()
 syntax on
 colo onedark
 filetype plugin indent on
+runtime macros/matchit.vim
+
 
 set nu
 set ts=2 sw=4
