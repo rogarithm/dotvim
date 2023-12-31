@@ -6,6 +6,9 @@ colo onedark
 filetype plugin indent on
 runtime macros/matchit.vim
 
+let mapleader = ","
+let maplocalleader = "\\"
+
 
 set nu
 set ts=2 sw=4
