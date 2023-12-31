@@ -23,6 +23,9 @@ set fileencodings=utf-8,cp949
 set nu
 set ts=2 sw=2
 
+" save folding and reroad automatically
+au BufWinLeave *.wofl mkview
+au BufWinEnter *.wofl silent loadview
 
 " Create an augroup if you don’t already have one
 augroup configgroup
