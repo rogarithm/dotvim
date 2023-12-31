@@ -13,6 +13,13 @@ nnoremap <leader>vec :vsplit ~/.vim/vimrc <BAR> wincmd L <CR>
 nnoremap <leader>vsc :up ~/.vim/vimrc <BAR> :source ~/.vim/vimrc <CR>
 
 
+autocmd FileType ruby nnoremap <leader>vsc :up ~/.vim/vimrc
+			\ <BAR> :source ~/.vim/vimrc<CR>
+			\ <BAR> :set ft=ruby<CR>
+autocmd FileType ruby nnoremap <leader>rsp :wall <BAR> :!rspec % <CR>
+autocmd FileType ruby nnoremap <leader>rb :wall <BAR> :!ruby % <CR>
+autocmd FileType ruby nnoremap <leader>rr :up <BAR> :!rake install <CR>
+
 
 nnoremap <F8> :G log <BAR> wincmd L <BAR> wincmd h <CR>
 
