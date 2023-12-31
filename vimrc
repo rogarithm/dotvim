@@ -9,6 +9,9 @@ runtime macros/matchit.vim
 let mapleader = ","
 let maplocalleader = "\\"
 
+nnoremap <leader>vec :vsplit ~/.vim/vimrc <BAR> wincmd L <CR>
+nnoremap <leader>vsc :up ~/.vim/vimrc <BAR> :source ~/.vim/vimrc <CR>
+
 
 set nu
 set ts=2 sw=4
