@@ -20,6 +20,9 @@ function! CapitalizeSqlFunctionName() range
     silent! execute ":'<,'>s/\\v(<text>)/\\U\\1/g"
     silent! execute ":'<,'>s/\\v(<values>)/\\U\\1/g"
     silent! execute ":'<,'>s/\\v(<length>)/\\U\\1/g"
+    silent! execute ":'<,'>s/\\v(<position>)/\\U\\1/g"
+    silent! execute ":'<,'>s/\\v(<locate>)/\\U\\1/g"
+    silent! execute ":'<,'>s/\\v(<strcmp>)/\\U\\1/g"
 endfunction
 function! CapitalizeSqlKeyword() range
     silent! execute ":'<,'>s/\\v(<show warnings>)/\\U\\1/g"
